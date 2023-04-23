@@ -1,0 +1,34 @@
+{
+  "name": "coworkingspace_be",
+  "version": "1.0.0",
+  "description": "\"Backend Development for CoWorkingSpace\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "start": "nodemon ./bin/www",
+    "dev": "NODE_ENV=development exec nodemon ./bin/www",
+    "migrate": "npx sequelize-cli db:migrate"
+  },
+  "author": "Y Uday Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "joi": "^17.9.1",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.2.0",
+    "pino": "^8.11.0",
+    "pino-pretty": "^10.0.0",
+    "sequelize": "^6.30.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.0"
+  }
+}
